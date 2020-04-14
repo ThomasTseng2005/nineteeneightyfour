@@ -17,7 +17,7 @@
 }
 
 .header h1{
-    font-size: 20rem;
+    font-size: 19rem;
     position: relative;
     top: -3rem;
     font-family: 'Raleway', sans-serif;
@@ -92,6 +92,10 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.c-template{
+    display: none;
+}
+
 .a-template .text{
     font-size: 1.4rem;
     margin: 3rem;
@@ -106,8 +110,16 @@
     font-weight: 200;
 }
 
+.c-template .text{
+    font-size: 1.4rem;
+    margin: 3rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+}
+
 .image{
     background-size: cover !important;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,6 +175,7 @@
 
 .six .image{
     background: url("image_six.jpg") no-repeat;
+    background-position: center 20%;
 }
 
 .six .image p{
@@ -171,7 +184,7 @@
 
 .seven .image{
     background: url("image_seven.jpg") no-repeat;
-    background-position: center 80%;
+    background-position: center 90%;
 }
 
 .seven .image p{
@@ -189,6 +202,41 @@
 .footer-copyright p{
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+@media only screen and (max-width: 768px){
+    body, html{
+        font-size: 90%;
+    }
+    .header h1{
+        font-size: 15rem;
+    }
+    .a-template{
+        grid-template-columns: 1fr;
+    }
+    .b-template{
+        display: none;
+    }
+    .c-template {
+        display: block;
+        grid-template-columns: 1fr;
+    }
+    .image p{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    body, html{
+        font-size: 80%;
+    }
+    .header h1{
+        font-size: 10rem;
+    }
+    .header h2{
+        display: none;
+    }
 }
 
 
